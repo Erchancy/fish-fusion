@@ -36,8 +36,8 @@ const { mongerInventory } = require("./fishMonger")
 
 // Create fishMenu function with (budget) as param
 const fishMenu = (budget) => {
-    ingredients = mongerInventory(budget)
-    output = `<h1>Menu</h1>\n<article class="menu">`
+    let ingredients = mongerInventory(budget)
+    let output = `<h1>Menu</h1>\n<article class="menu">`
     for (const menuItem of ingredients) {
         output += 
             `\n\t<h2>${menuItem.species}</h2>

@@ -66,17 +66,16 @@ Export mongerInventory function
 */
 
 const mongerInventory = (price) => {
-    fishStock = []
-    purchasedFish = []
-    for (fish of boatInventory())
+    let fishStock = []
+    let purchasedFish = []
+    for (let fish of boatInventory())
               if (fish.amount >= 10 && fish.price < 7.50) {
                   fishStock.push({ id: fish.id, species: fish.species, weight: fish.weight, price: fish.price, amount: 10 })
               }
-    for (fish of fishStock)
+    for (let fish of fishStock)
         if (fish.price <= price) {
                   purchasedFish.push({ id: fish.id, species: fish.species, weight: fish.weight, price: fish.price, amount: fish.amount * .5 })
               }
     return purchasedFish
 }
-
 module.exports = { mongerInventory}

@@ -34,7 +34,7 @@ function checkAdult(age) {
 
 //Import boatInventory
     // const { boatInventory } = require("./fishingBoat.js")
-const { boatInventory } = require("./fishingBoat.js")
+
 
 /* Create function called mongerInventory(boatInventory, price)
     the function iterates through and checks the object amount and price of boatInventory
@@ -64,6 +64,7 @@ const { boatInventory } = require("./fishingBoat.js")
 Export mongerInventory function
          module.exports = { mongerInventory}
 */
+const { boatInventory } = require("./fishingBoat.js")
 
 const mongerInventory = (price) => {
     let fishStock = []

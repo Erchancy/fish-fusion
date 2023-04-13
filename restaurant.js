@@ -40,10 +40,11 @@ const fishMenu = (budget) => {
     let output = `<h1>Menu</h1>\n<article class="menu">`
     for (const menuItem of ingredients) {
         output += 
-            `\n\t<h2>${menuItem.species}</h2>
-            <section class="menu__item">${menuItem.species} Soup</section>
-            <section class="menu__item">${menuItem.species} Sandwich</section>
-            <section class="menu__item">Grilled ${menuItem.species}</section>`
+            `<h2>${menuItem.species}</h2>
+    <section class="menu__item">${menuItem.species} Soup</section>
+    <section class="menu__item">${menuItem.species} Sandwich</section>
+    <section class="menu__item">Grilled ${menuItem.species}</section>
+`
     }
     return output += `\n</article>`
 }
